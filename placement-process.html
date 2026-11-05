@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Process | Recruitment System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <B><h2>RPMS</h2></B>
+        <p></p>
+
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="candidates.html">Candidates</a>
+            <a href="companies.html">Companies</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="applications.html">Applications</a>
+            <a href="interviews.html">Interviews</a>
+            <a href="placement-process.html" class="active">Placement Process</a>
+            <a href="reports.html">Reports</a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <header class="topbar dashboard-welcome">
+            <h2>Placement Process</h2>
+            <span>Welcome</span>
+        </header>
+
+        <section class="page-content">
+
+            <div class="page-heading">
+                <h1>Selection, Offer & Placement Process</h1>
+                <p>Manage interview feedback, job offers and candidate joining details.</p>
+            </div>
+
+            <!-- Candidate & Job Summary -->
+            <div class="content-card candidate-summary-card">
+             <h2>Candidate & Job Summary</h2>
+
+          <div class="table-responsive">
+          <table class="candidate-summary-table">
+            <thead>
+                <tr>
+                    <th>Candidate Name</th>
+                    <th>Company</th>
+                    <th>Job Title</th>
+                    <th>Selection Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td><strong>Rahul Patil</strong></td>
+                    <td>Infosys</td>
+                    <td>Java Developer</td>
+                    <td>
+                        <span class="status-badge selected">SELECTED</span>
+                    </td>
+                </tr>
+               </tbody>
+              </table>
+          </div>
+       </div>
+            <!-- Interview Feedback -->
+            <div class="content-card">
+                <h2>Tab 1: Interview Feedback</h2>
+
+                <form>
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label>Technical Rating (1-5)</label>
+                            <select>
+                                <option value="">Select Rating</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option selected>5</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Communication Rating (1-5)</label>
+                            <select>
+                                <option value="">Select Rating</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option selected>5</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Problem Solving Rating (1-5)</label>
+                            <select>
+                                <option value="">Select Rating</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option selected>5</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Overall Rating (1-5)</label>
+                            <select>
+                                <option value="">Select Rating</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option selected>5</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Interview Result *</label>
+                            <select required>
+                                <option value="">Select Result</option>
+                                <option>NEXT_ROUND</option>
+                                <option selected>SELECTED</option>
+                                <option>REJECTED</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group placement-textarea">
+                        <label>Feedback Remarks</label>
+                        <textarea rows="4" placeholder="Enter interview feedback and remarks"></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-primary">Save Feedback</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Offer Details -->
+            <div class="content-card">
+                <h2>Tab 2: Offer Details</h2>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label>Job Title</label>
+                        <input type="text" value="Java Developer">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Offered Salary (LPA)</label>
+                        <input type="number" step="0.1" value="5.2">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Offer Date</label>
+                        <input type="date" value="2026-11-10">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Offer Status</label>
+                        <select>
+                            <option>Pending</option>
+                            <option selected>ACCEPTED</option>
+                            <option>REJECTED</option>
+                            <option>WITHDRAWN</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-primary">Create Offer</button>
+                    <button type="button" class="btn-secondary">Update Offer Status</button>
+                </div>
+            </div>
+
+            <!-- Joining / Placement -->
+            <div class="content-card">
+                <h2>Tab 3: Joining / Placement</h2>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label>Joining Date</label>
+                        <input type="date" value="2026-12-01">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Joining Status</label>
+                        <select>
+                            <option value="">Select Joining Status</option>
+                            <option>JOINED</option>
+                            <option>NOT_JOINED</option>
+                            <option>DEFERRED</option>
+                            <option>NO_SHOW</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Placement Status</label>
+                        <select>
+                            <option value="">Select Placement Status</option>
+                            <option>PLACED</option>
+                            <option>NOT_PLACED</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-primary">Confirm Joining</button>
+                    <button type="button" class="btn-primary">Mark Placed</button>
+                    <a href="candidate-details.html" class="btn-secondary">View Candidate Profile</a>
+                    <a href="reports.html" class="btn-secondary">View Reports</a>
+                </div>
+            </div>
+
+        </section>
+    </main>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Details | RPMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+    <aside class="sidebar">
+        <B><h2>RPMS</h2></B>
+        <p></p>
+
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="candidates.html" class="active">Candidates</a>
+            <a href="companies.html">Companies</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="applications.html">Applications</a>
+            <a href="interviews.html">Interviews</a>
+            <a href="placement-process.html">Placement Process</a>
+            <a href="reports.html">Reports</a>
+            <a href="login.html">Logout</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar dashboard-welcome">
+            <h2>Candidate Management</h2>
+            <span></span>
+        </header>
+
+        <section class="page-content">
+
+            <div class="page-heading">
+                <div>
+                    <h1>Candidate Details</h1>
+                    <p>Complete candidate profile and activity history.</p>
+                </div>
+                <a href="candidates.html" class="btn btn-secondary">Back to Candidate List</a>
+            </div>
+
+            <!-- Candidate Summary -->
+            <div class="form-card candidate-summary">
+                <div>
+                    <h2>Rahul Patil</h2>
+                    <p>Candidate ID: CAN1001</p>
+                    <p>Primary Technology: Java</p>
+                </div>
+
+                <span class="status-badge active">ACTIVE</span>
+
+                <a href="candidate-form.html" class="btn btn-primary">Edit Candidate</a>
+            </div>
+
+            <!-- Personal Information -->
+            <div class="form-card">
+                <h3>Personal Information</h3>
+
+                <div class="details-grid">
+                    <p><strong>Full Name:</strong> Rahul Patil</p>
+                    <p><strong>Email:</strong> rahul.patil@example.com</p>
+                    <p><strong>Mobile:</strong> 9876543210</p>
+                    <p><strong>Gender:</strong> Male</p>
+                    <p><strong>Date of Birth:</strong> 15-May-2003</p>
+                </div>
+            </div>
+
+            <!-- Academic Details -->
+            <div class="form-card">
+                <h3>Academic Details</h3>
+
+                <div class="details-grid">
+                    <p><strong>Qualification:</strong> BE</p>
+                    <p><strong>College:</strong> RPMS Demo College</p>
+                    <p><strong>University:</strong> Demo University</p>
+                    <p><strong>Passing Year:</strong> 2025</p>
+                    <p><strong>Percentage:</strong> 68%</p>
+                    <p><strong>Backlog Count:</strong> 0</p>
+                </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="form-card">
+                <h3>Skills</h3>
+
+                <div class="details-grid">
+                    <p><strong>Primary Technology:</strong> Java</p>
+                    <p><strong>Secondary Skills:</strong> SQL</p>
+                    <p><strong>Skill Level:</strong> Intermediate</p>
+                </div>
+            </div>
+
+            <!-- Applications History -->
+            <div class="form-card">
+                <h3>Applications History</h3>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Application ID</th>
+                                <th>Company</th>
+                                <th>Job</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>APP1001</td>
+                                <td>Infosys</td>
+                                <td>Java Developer</td>
+                                <td>SHORTLISTED</td>
+                            </tr>
+                            <tr>
+                                <td>APP1002</td>
+                                <td>TCS</td>
+                                <td>Software Trainee</td>
+                                <td>INTERVIEW</td>
+                            </tr>
+                            <tr>
+                                <td>APP1003</td>
+                                <td>Wipro</td>
+                                <td>Junior Developer</td>
+                                <td>APPLIED</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Interview History -->
+            <div class="form-card">
+                <h3>Interview History</h3>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Interview ID</th>
+                                <th>Company</th>
+                                <th>Round</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>INT1008</td>
+                                <td>Infosys</td>
+                                <td>Technical</td>
+                                <td>03-Nov-2026</td>
+                                <td>SCHEDULED</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Offer / Placement History -->
+            <div class="form-card">
+                <h3>Offer / Placement History</h3>
+
+                <div class="details-grid">
+                    <p><strong>Total Applications:</strong> 3</p>
+                    <p><strong>Total Offers:</strong> 1</p>
+                    <p><strong>Offer Status:</strong> ACCEPTED</p>
+                    <p><strong>Placement Status:</strong> ACTIVE</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+</div>
+
+</body>
+</html>

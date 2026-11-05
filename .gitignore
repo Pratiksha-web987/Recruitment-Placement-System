@@ -1,0 +1,8 @@
+venv/
+__pycache__/
+*.py[cod]
+.env
+.idea/
+Screenshots/
+Recruitment-Placement-System-Backup/
+backend/activity_log.txt

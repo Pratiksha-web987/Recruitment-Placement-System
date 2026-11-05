@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applications | Recruitment System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <B><h2>RPMS</h2></B>
+        <p></p>
+
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="candidates.html">Candidates</a>
+            <a href="companies.html">Companies</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="applications.html" class="active">Applications</a>
+            <a href="interviews.html">Interviews</a>
+            <a href="placement-process.html">Placement Process</a>
+            <a href="reports.html">Reports</a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <header class="topbar dashboard-welcome">
+            <h2>Applications</h2>
+            <span></span>
+        </header>
+
+        <section class="page-content">
+
+            <div class="page-heading">
+                <h1>Application Management</h1>
+                <p>Track candidate applications and their recruitment pipeline.</p>
+            </div>
+
+            <!-- Pipeline Summary -->
+            <div class="summary-cards">
+                <div class="summary-card">
+                    <h3>Total Applications</h3>
+                    <h2>125</h2>
+                </div>
+
+                <div class="summary-card">
+                    <h3>Applied</h3>
+                    <h2>35</h2>
+                </div>
+
+                <div class="summary-card">
+                    <h3>Shortlisted</h3>
+                    <h2>28</h2>
+                </div>
+
+                <div class="summary-card">
+                    <h3>Interview</h3>
+                    <h2>22</h2>
+                </div>
+
+                <div class="summary-card">
+                    <h3>Selected</h3>
+                    <h2>18</h2>
+                </div>
+
+                <div class="summary-card">
+                    <h3>Rejected</h3>
+                    <h2>22</h2>
+                </div>
+            </div>
+
+            <!-- Application Filters -->
+            <div class="content-card">
+                <h2>Application Filters</h2>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label>Application ID</label>
+                        <input type="text" placeholder="Enter Application ID">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Candidate</label>
+                        <input type="text" placeholder="Enter Candidate Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Company</label>
+                        <select>
+                            <option value="">All Companies</option>
+                            <option>Infosys</option>
+                            <option>TCS</option>
+                            <option>Wipro</option>
+                            <option>Tech Mahindra</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Job</label>
+                        <select>
+                            <option value="">All Jobs</option>
+                            <option>Associate Java Developer</option>
+                            <option>Software Trainee</option>
+                            <option>Web Developer</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Application Status</label>
+                        <select>
+                            <option value="">All Statuses</option>
+                            <option>Applied</option>
+                            <option>Eligible</option>
+                            <option>Shortlisted</option>
+                            <option>Interview</option>
+                            <option>Selected</option>
+                            <option>Rejected</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Date From</label>
+                        <input type="date">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Date To</label>
+                        <input type="date">
+                    </div>
+
+                </div>
+
+                <div class="form-actions">
+                    <button class="btn-primary" type="button">Search</button>
+                    <button class="btn-secondary" type="reset">Reset</button>
+                </div>
+            </div>
+
+            <!-- Applications Table -->
+            <div class="content-card">
+                <div class="table-heading">
+                    <h2>Applications List</h2>
+                </div>
+
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Application ID</th>
+                                <th>Candidate</th>
+                                <th>Company</th>
+                                <th>Job</th>
+                                <th>Applied Date</th>
+                                <th>Eligibility</th>
+                                <th>Application Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>APP1001</td>
+                                <td>
+                                    <a href="candidate-details.html">Rahul Patil</a>
+                                </td>
+                                <td>Infosys</td>
+                                <td>JOB-2026-001</td>
+                                <td>15-Oct-2026</td>
+                                <td><span class="status-badge active">Eligible</span></td>
+                                <td><span class="status-badge selected">Shortlisted</span></td>
+                                <td>
+                                    <a href="interviews.html" class="table-link">Schedule Interview</a>
+                                    <a href="candidate-details.html" class="table-link">View History</a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>APP1002</td>
+                                <td><a href="candidate-details.html">Amit Sharma</a></td>
+                                <td>TCS</td>
+                                <td>JOB-2026-002</td>
+                                <td>16-Oct-2026</td>
+                                <td><span class="status-badge active">Eligible</span></td>
+                                <td><span class="status-badge pending">Applied</span></td>
+                                <td>
+                                    <a href="candidate-details.html" class="table-link">View History</a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>APP1003</td>
+                                <td><a href="candidate-details.html">Priya Verma</a></td>
+                                <td>Wipro</td>
+                                <td>JOB-2026-003</td>
+                                <td>17-Oct-2026</td>
+                                <td><span class="status-badge active">Eligible</span></td>
+                                <td><span class="status-badge selected">Interview</span></td>
+                                <td>
+                                    <a href="interviews.html" class="table-link">Schedule Interview</a>
+                                    <a href="candidate-details.html" class="table-link">View History</a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>APP1004</td>
+                                <td><a href="candidate-details.html">Neha Sharma</a></td>
+                                <td>Tech Mahindra</td>
+                                <td>JOB-2026-004</td>
+                                <td>18-Oct-2026</td>
+                                <td><span class="status-badge pending">Pending</span></td>
+                                <td><span class="status-badge pending">Applied</span></td>
+                                <td>
+                                    <a href="candidate-details.html" class="table-link">View History</a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>APP1005</td>
+                                <td><a href="candidate-details.html">Rohit Verma</a></td>
+                                <td>Infosys</td>
+                                <td>JOB-2026-001</td>
+                                <td>19-Oct-2026</td>
+                                <td><span class="status-badge active">Eligible</span></td>
+                                <td><span class="status-badge rejected">Rejected</span></td>
+                                <td>
+                                    <a href="candidate-details.html" class="table-link">View History</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="helper-text">
+                    Showing 5 sample application records.
+                </p>
+            </div>
+
+        </section>
+    </main>
+</div>
+
+</body>
+</html>

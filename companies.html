@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Companies | RPMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+    <aside class="sidebar">
+        <B><h2>RPMS</h2></B>
+        <p></p>
+
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="candidates.html">Candidates</a>
+            <a href="companies.html" class="active">Companies</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="applications.html">Applications</a>
+            <a href="interviews.html">Interviews</a>
+            <a href="placement-process.html">Placement Process</a>
+            <a href="reports.html">Reports</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar dashboard-welcome">
+            <h2>Company Management</h2>
+            <span></span>
+        </header>
+
+        <section class="page-content">
+
+            <div class="page-heading">
+                <div>
+                    <h1>Companies</h1>
+                    <p>Manage employer and company information.</p>
+                </div>
+            </div>
+
+            <!-- Company Search -->
+            <div class="form-card">
+                <h3>Company Search / Filter</h3>
+
+                <div class="company-filter-grid">
+                    <div class="form-group">
+                        <label>Company Name</label>
+                        <input type="text" placeholder="Search company name">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Industry</label>
+                        <select>
+                            <option value="">All Industries</option>
+                            <option>IT</option>
+                            <option>Banking</option>
+                            <option>Manufacturing</option>
+                            <option>Consulting</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Company Type</label>
+                        <select>
+                            <option value="">All Types</option>
+                            <option>MNC</option>
+                            <option>Startup</option>
+                            <option>Mid-size</option>
+                            <option>Consultancy</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Status</label>
+                        <select>
+                            <option value="">All Status</option>
+                            <option>ACTIVE</option>
+                            <option>INACTIVE</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="company-actions">
+                    <button class="btn btn-primary" type="button">Search</button>
+                    <button class="btn btn-secondary" type="reset">Reset</button>
+                </div>
+            </div>
+
+            <!-- Company Form -->
+            <div class="form-card">
+                <h3>Add Company</h3>
+
+                <form action="#" method="get">
+
+                    <div class="company-filter-grid">
+
+                        <div class="form-group">
+                            <label>Company Name *</label>
+                            <input type="text" placeholder="Enter company name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Industry *</label>
+                            <input type="text" placeholder="Enter industry" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Website</label>
+                            <input type="url" placeholder="https://www.example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Location *</label>
+                            <input type="text" placeholder="Enter company location" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>HR Name *</label>
+                            <input type="text" placeholder="Enter HR contact name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>HR Email *</label>
+                            <input type="email" placeholder="Enter HR email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>HR Mobile</label>
+                            <input type="tel" placeholder="Enter HR mobile number">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Company Type *</label>
+                            <select required>
+                                <option value="">Select Company Type</option>
+                                <option>MNC</option>
+                                <option>Startup</option>
+                                <option>Mid-size</option>
+                                <option>Consultancy</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Status *</label>
+                            <select required>
+                                <option value="">Select Status</option>
+                                <option>ACTIVE</option>
+                                <option>INACTIVE</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="company-actions">
+                        <button type="submit" class="btn btn-primary">Save Company</button>
+                        <button type="reset" class="btn btn-secondary">Reset</button>
+                    </div>
+
+                </form>
+            </div>
+
+            <!-- Company List -->
+            <div class="form-card">
+                <h3>Company List</h3>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Company Name</th>
+                                <th>Industry</th>
+                                <th>Location</th>
+                                <th>HR Name</th>
+                                <th>Company Type</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Infosys</td>
+                                <td>IT</td>
+                                <td>Pune</td>
+                                <td>Priya Sharma</td>
+                                <td>MNC</td>
+                                <td><span class="status-badge active">ACTIVE</span></td>
+                                <td><a href="#">Edit</a></td>
+                            </tr>
+
+                            <tr>
+                                <td>TCS</td>
+                                <td>IT</td>
+                                <td>Mumbai</td>
+                                <td>Amit Verma</td>
+                                <td>MNC</td>
+                                <td><span class="status-badge active">ACTIVE</span></td>
+                                <td><a href="#">Edit</a></td>
+                            </tr>
+
+                            <tr>
+                                <td>Wipro</td>
+                                <td>IT</td>
+                                <td>Bengaluru</td>
+                                <td>Neha Patil</td>
+                                <td>MNC</td>
+                                <td><span class="status-badge active">ACTIVE</span></td>
+                                <td><a href="#">Edit</a></td>
+                            </tr>
+
+                            <tr>
+                                <td>Tech Mahindra</td>
+                                <td>IT</td>
+                                <td>Pune</td>
+                                <td>Rohit Shah</td>
+                                <td>MNC</td>
+                                <td><span class="status-badge active">ACTIVE</span></td>
+                                <td><a href="#">Edit</a></td>
+                            </tr>
+
+                            <tr>
+                                <td>Startup Solutions</td>
+                                <td>Software</td>
+                                <td>Nagpur</td>
+                                <td> Sneha Joshi</td>
+                                <td>Startup</td>
+                                <td><span class="status-badge">INACTIVE</span></td>
+                                <td><a href="#">Edit</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+</div>
+
+</body>
+</html>

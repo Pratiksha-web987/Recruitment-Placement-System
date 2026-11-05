@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Openings | RPMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+    <aside class="sidebar">
+        <B><h2>RPMS</h2></B>
+        <p></p>
+
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="candidates.html">Candidates</a>
+            <a href="companies.html">Companies</a>
+            <a href="jobs.html" class="active">Jobs</a>
+            <a href="applications.html">Applications</a>
+            <a href="interviews.html">Interviews</a>
+            <a href="placement-process.html">Placement Process</a>
+            <a href="reports.html">Reports</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar dashboard-welcome">
+            <h2>Job Management</h2>
+            <span></span>
+        </header>
+
+        <section class="page-content">
+
+            <div class="page-heading">
+                <div>
+                    <h1>Job Openings</h1>
+                    <p>Browse and manage company job requirements.</p>
+                </div>
+
+                <a href="job-form.html" class="btn btn-primary">+ Create Job</a>
+            </div>
+
+            <!-- Job Summary Cards -->
+            <div class="job-summary-grid">
+
+                <div class="job-summary-card">
+                    <p>Total Jobs</p>
+                    <h2>35</h2>
+                </div>
+
+                <div class="job-summary-card">
+                    <p>Open Jobs</p>
+                    <h2>28</h2>
+                </div>
+
+                <div class="job-summary-card">
+                    <p>Draft Jobs</p>
+                    <h2>4</h2>
+                </div>
+
+                <div class="job-summary-card">
+                    <p>Closed Jobs</p>
+                    <h2>3</h2>
+                </div>
+
+            </div>
+
+            <!-- Job Filter Panel -->
+            <div class="form-card">
+                <h3>Job Filter Panel</h3>
+
+                <div class="job-filter-grid">
+
+                    <div class="form-group">
+                        <label>Company</label>
+                        <select>
+                            <option value="">All Companies</option>
+                            <option>Infosys</option>
+                            <option>TCS</option>
+                            <option>Wipro</option>
+                            <option>Tech Mahindra</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Primary Technology</label>
+                        <select>
+                            <option value="">All Technologies</option>
+                            <option>Java</option>
+                            <option>Python</option>
+                            <option>Testing</option>
+                            <option>Data Analytics</option>
+                            <option>Web Development</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Location</label>
+                        <input type="text" placeholder="Enter job location">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Job Status</label>
+                        <select>
+                            <option value="">All Status</option>
+                            <option>DRAFT</option>
+                            <option>OPEN</option>
+                            <option>CLOSED</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Employment Type</label>
+                        <select>
+                            <option value="">All Types</option>
+                            <option>Full-time</option>
+                            <option>Internship</option>
+                            <option>Contract</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="job-actions">
+                    <button type="button" class="btn btn-primary">Search</button>
+                    <button type="reset" class="btn btn-secondary">Reset</button>
+                </div>
+            </div>
+
+            <!-- Jobs Table -->
+            <div class="form-card">
+                <h3>Jobs List</h3>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Job Code</th>
+                                <th>Company</th>
+                                <th>Job Title</th>
+                                <th>Openings</th>
+                                <th>Location</th>
+                                <th>Technology</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>JOB-2026-001</td>
+                                <td>Infosys</td>
+                                <td>Associate Java Developer</td>
+                                <td>15</td>
+                                <td>Pune</td>
+                                <td>Java</td>
+                                <td><span class="status-badge active">OPEN</span></td>
+                                <td>
+                                    <a href="applications.html">View Applications</a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>JOB-2026-002</td>
+                                <td>TCS</td>
+                                <td>Software Trainee</td>
+                                <td>10</td>
+                                <td>Mumbai</td>
+                                <td>Java</td>
+                                <td><span class="status-badge active">OPEN</span></td>
+                                <td>
+                                    <a href="applications.html">View Applications</a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>JOB-2026-003</td>
+                                <td>Wipro</td>
+                                <td>Python Developer</td>
+                                <td>8</td>
+                                <td>Bengaluru</td>
+                                <td>Python</td>
+                                <td><span class="status-badge active">OPEN</span></td>
+                                <td>
+                                    <a href="applications.html">View Applications</a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>JOB-2026-004</td>
+                                <td>Tech Mahindra</td>
+                                <td>Software Tester</td>
+                                <td>5</td>
+                                <td>Pune</td>
+                                <td>Testing</td>
+                                <td><span class="status-badge">DRAFT</span></td>
+                                <td>
+                                    <a href="applications.html">View Applications</a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>JOB-2026-005</td>
+                                <td>Infosys</td>
+                                <td>Web Developer</td>
+                                <td>6</td>
+                                <td>Hyderabad</td>
+                                <td>Web Development</td>
+                                <td><span class="status-badge">CLOSED</span></td>
+                                <td>
+                                    <a href="applications.html">View Applications</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+    </main>
+</div>
+
+</body>
+</html>

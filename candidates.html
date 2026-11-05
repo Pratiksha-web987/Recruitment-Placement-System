@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidates | RPS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="dashboard-layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+    <B><h2>RPMS</h2></B>
+    <p class="sidebar-label"></p>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="candidates.html" class="active">Candidates</a>
+        <a href="companies.html">Companies</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="applications.html">Applications</a>
+        <a href="interviews.html">Interviews</a>
+        <a href="placement-process.html">Placements</a>
+        <a href="reports.html">Reports</a>
+    </nav>
+</aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <header class="topbar dashboard-welcome">
+            <div>
+                <h2>Candidates</h2>
+                <p></p>
+            </div>
+            <div></div>
+        </header>
+
+        <section class="dashboard-content">
+
+            <div class="page-heading">
+                <div>
+                    <h2>Candidate Management</h2>
+                    <p>Search, filter and manage candidate records.</p>
+                </div>
+
+                <a href="candidate-form.html"
+                   class="add-button">
+                    + Add Candidate
+                </a>
+            </div>
+
+            <!-- Filter Panel -->
+            <section class="filter-card">
+
+                <h3>Search & Filter Candidates</h3>
+
+                <form action="#" method="get">
+
+                    <div class="filter-grid">
+
+                        <div class="form-group">
+                            <label>Candidate ID</label>
+                            <input type="text"
+                                   placeholder="Enter Candidate ID">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Candidate Name</label>
+                            <input type="text"
+                                   placeholder="Enter Candidate Name">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Mobile</label>
+                            <input type="text"
+                                   placeholder="Enter Mobile Number">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email"
+                                   placeholder="Enter Email">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Technology</label>
+                            <select>
+                                <option value="">All Technologies</option>
+                                <option>Java</option>
+                                <option>Python</option>
+                                <option>Testing</option>
+                                <option>Data Analytics</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Passing Year</label>
+                            <select>
+                                <option value="">All Years</option>
+                                <option>2024</option>
+                                <option>2025</option>
+                                <option>2026</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Qualification</label>
+                            <select>
+                                <option value="">All Qualifications</option>
+                                <option>BE</option>
+                                <option>BTech</option>
+                                <option>MCA</option>
+                                <option>BSc</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Placement Status</label>
+                            <select>
+                                <option value="">All Status</option>
+                                <option>Active</option>
+                                <option>Placed</option>
+                                <option>On Hold</option>
+                                <option>Inactive</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="filter-actions">
+                        <button type="submit" class="btn btn-primary">
+                            Search
+                        </button>
+
+                        <button type="reset" class="reset-button">
+                            Reset
+                        </button>
+                    </div>
+
+                </form>
+            </section>
+
+            <!-- Candidate Table -->
+            <section class="activity-card">
+
+                <div class="table-heading">
+                    <h3>Candidate Records</h3>
+                    <span>Total Records: 1</span>
+                </div>
+
+                <div class="table-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Candidate ID</th>
+                                <th>Candidate Name</th>
+                                <th>Technology</th>
+                                <th>Qualification</th>
+                                <th>Passing Year</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+    <tr>
+        <td>CAN1001</td>
+        <td>Rahul Patil</td>
+        <td>Java</td>
+        <td>BE</td>
+        <td>2025</td>
+        <td><span class="status selected">ACTIVE</span></td>
+        <td><a href="candidate-details.html">View</a> | <a href="candidate-form.html">Edit</a></td>
+    </tr>
+
+    <tr>
+        <td>CAN1002</td>
+        <td>Amit Verma</td>
+        <td>Python</td>
+        <td>BTech</td>
+        <td>2025</td>
+        <td><span class="status selected">ACTIVE</span></td>
+        <td><a href="candidate-details.html">View</a> | <a href="candidate-form.html">Edit</a></td>
+    </tr>
+
+    <tr>
+        <td>CAN1003</td>
+        <td>Priya Patel</td>
+        <td>Testing</td>
+        <td>MCA</td>
+        <td>2024</td>
+        <td><span class="status pending">ON_HOLD</span></td>
+        <td><a href="candidate-details.html">View</a> | <a href="candidate-form.html">Edit</a></td>
+    </tr>
+
+    <tr>
+        <td>CAN1004</td>
+        <td>Pratiksha Biradar</td>
+        <td>Java</td>
+        <td>BE</td>
+        <td>2025</td>
+        <td><span class="status selected">ACTIVE</span></td>
+        <td><a href="candidate-details.html">View</a> | <a href="candidate-form.html">Edit</a></td>
+    </tr>
+
+    <tr>
+        <td>CAN1005</td>
+        <td>Rahul Sharma</td>
+        <td>Data Analytics</td>
+        <td>BSc</td>
+        <td>2024</td>
+        <td><span class="status selected">PLACED</span></td>
+        <td><a href="candidate-details.html">View</a> | <a href="candidate-form.html">Edit</a></td>
+    </tr>
+
+    <tr>
+        <td>CAN1006</td>
+        <td> Sneha Patil</td>
+        <td>Python</td>
+        <td>MCA</td>
+        <td>2025</td>
+        <td><span class="status selected">ACTIVE</span></td>
+        <td><a href="candidate-details.html">View</a> | <a href="candidate-form.html">Edit</a></td>
+    </tr>
+
+    <tr>
+        <td>CAN1007</td>
+        <td>Akash Gupta</td>
+        <td>Testing</td>
+        <td>BTech</td>
+        <td>2026</td>
+        <td><span class="status rejected">INACTIVE</span></td>
+        <td><a href="candidate-details.html">View</a> | <a href="candidate-form.html">Edit</a></td>
+    </tr>
+
+    <tr>
+        <td>CAN1008</td>
+        <td>Prit Singh</td>
+        <td>Java</td>
+        <td>BE</td>
+        <td>2025</td>
+        <td><span class="status selected">ACTIVE</span></td>
+        <td><a href="candidate-details.html">View</a> | <a href="candidate-form.html">Edit</a></td>
+    </tr>
+</tbody>
+                    </table>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button disabled>Previous</button>
+                    <button class="current-page">1</button>
+                    <button disabled>Next</button>
+                </div>
+
+            </section>
+
+        </section>
+    </main>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports | Recruitment System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <B><h2>RPMS</h2></B>
+        <p></p>
+
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="candidates.html">Candidates</a>
+            <a href="companies.html">Companies</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="applications.html">Applications</a>
+            <a href="interviews.html">Interviews</a>
+            <a href="placement-process.html">Placement Process</a>
+            <a href="reports.html" class="active">Reports</a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <header class="topbar dashboard-welcome">
+            <h2>Reports</h2>
+            <span></span>
+        </header>
+
+        <section class="page-content">
+
+            <div class="page-heading">
+                <h1>Recruitment & Placement Reports</h1>
+                <p>Management-level recruitment and placement performance insights.</p>
+            </div>
+
+            <!-- Report Filters -->
+            <div class="content-card">
+                <h2>Report Filters</h2>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label>Date From</label>
+                        <input type="date">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Date To</label>
+                        <input type="date">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Technology</label>
+                        <select>
+                            <option value="">All Technologies</option>
+                            <option>Java</option>
+                            <option>Python</option>
+                            <option>Web Development</option>
+                            <option>Testing</option>
+                            <option>.NET</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Company</label>
+                        <select>
+                            <option value="">All Companies</option>
+                            <option>Infosys</option>
+                            <option>TCS</option>
+                            <option>Wipro</option>
+                            <option>Tech Mahindra</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Recruiter</label>
+                        <select>
+                            <option value="">All Recruiters</option>
+                            <option>Recruiter 1</option>
+                            <option>Recruiter 2</option>
+                            <option>Recruiter 3</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Passing Year</label>
+                        <select>
+                            <option value="">All Years</option>
+                            <option>2024</option>
+                            <option>2025</option>
+                            <option>2026</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-primary">Apply Filters</button>
+                    <button type="reset" class="btn-secondary">Reset</button>
+                    <button type="button" class="btn-secondary" onclick="window.print()">Print / Export</button>
+                </div>
+            </div>
+
+            <!-- KPI Cards -->
+            <div class="report-kpi-grid">
+
+                <div class="report-kpi-card">
+                    <p>Applications</p>
+                    <h2>1,200</h2>
+                </div>
+
+                <div class="report-kpi-card">
+                    <p>Interviews</p>
+                    <h2>480</h2>
+                </div>
+
+                <div class="report-kpi-card">
+                    <p>Selected</p>
+                    <h2>210</h2>
+                </div>
+
+                <div class="report-kpi-card">
+                    <p>Joined</p>
+                    <h2>175</h2>
+                </div>
+
+                <div class="report-kpi-card">
+                    <p>Placement %</p>
+                    <h2>14.6%</h2>
+                </div>
+
+            </div>
+
+            <!-- Recruitment Funnel -->
+            <div class="content-card">
+                <h2>Recruitment Funnel</h2>
+
+                <div class="funnel-item">
+                    <div class="funnel-label">
+                        <span>Applications</span>
+                        <strong>1,200</strong>
+                    </div>
+                    <div class="funnel-track">
+                        <div class="funnel-fill" style="width:100%"></div>
+                    </div>
+                </div>
+
+                <div class="funnel-item">
+                    <div class="funnel-label">
+                        <span>Shortlisted</span>
+                        <strong>760</strong>
+                    </div>
+                    <div class="funnel-track">
+                        <div class="funnel-fill" style="width:63.3%"></div>
+                    </div>
+                </div>
+
+                <div class="funnel-item">
+                    <div class="funnel-label">
+                        <span>Interviewed</span>
+                        <strong>480</strong>
+                    </div>
+                    <div class="funnel-track">
+                        <div class="funnel-fill" style="width:40%"></div>
+                    </div>
+                </div>
+
+                <div class="funnel-item">
+                    <div class="funnel-label">
+                        <span>Selected</span>
+                        <strong>210</strong>
+                    </div>
+                    <div class="funnel-track">
+                        <div class="funnel-fill" style="width:17.5%"></div>
+                    </div>
+                </div>
+
+                <div class="funnel-item">
+                    <div class="funnel-label">
+                        <span>Joined</span>
+                        <strong>175</strong>
+                    </div>
+                    <div class="funnel-track">
+                        <div class="funnel-fill" style="width:14.6%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Company-wise Placement -->
+            <div class="content-card">
+                <h2>Company-wise Placement</h2>
+
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Company</th>
+                                <th>Applications</th>
+                                <th>Selected</th>
+                                <th>Joined</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Infosys</td>
+                                <td>300</td>
+                                <td>65</td>
+                                <td>55</td>
+                            </tr>
+                            <tr>
+                                <td>TCS</td>
+                                <td>250</td>
+                                <td>50</td>
+                                <td>42</td>
+                            </tr>
+                            <tr>
+                                <td>Wipro</td>
+                                <td>200</td>
+                                <td>40</td>
+                                <td>35</td>
+                            </tr>
+                            <tr>
+                                <td>Tech Mahindra</td>
+                                <td>150</td>
+                                <td>30</td>
+                                <td>25</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Technology-wise Placement -->
+            <div class="content-card">
+                <h2>Technology-wise Placement</h2>
+
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Technology</th>
+                                <th>Total Candidates</th>
+                                <th>Selected</th>
+                                <th>Joined</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Java</td>
+                                <td>350</td>
+                                <td>85</td>
+                                <td>70</td>
+                            </tr>
+                            <tr>
+                                <td>Python</td>
+                                <td>250</td>
+                                <td>50</td>
+                                <td>42</td>
+                            </tr>
+                            <tr>
+                                <td>Web Development</td>
+                                <td>200</td>
+                                <td>35</td>
+                                <td>28</td>
+                            </tr>
+                            <tr>
+                                <td>Testing</td>
+                                <td>150</td>
+                                <td>25</td>
+                                <td>20</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Recruiter Performance -->
+            <div class="content-card">
+                <h2>Recruiter Performance</h2>
+
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Recruiter</th>
+                                <th>Applications</th>
+                                <th>Interviews</th>
+                                <th>Selected</th>
+                                <th>Joined</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Recruiter 1</td>
+                                <td>400</td>
+                                <td>160</td>
+                                <td>70</td>
+                                <td>60</td>
+                            </tr>
+                            <tr>
+                                <td>Recruiter 2</td>
+                                <td>350</td>
+                                <td>140</td>
+                                <td>65</td>
+                                <td>55</td>
+                            </tr>
+                            <tr>
+                                <td>Recruiter 3</td>
+                                <td>250</td>
+                                <td>100</td>
+                                <td>45</td>
+                                <td>35</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Pending Interviews -->
+            <div class="content-card">
+                <h2>Pending Interviews</h2>
+
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Candidate</th>
+                                <th>Company</th>
+                                <th>Interview Round</th>
+                                <th>Interview Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Rahul Patil</td>
+                                <td>Infosys</td>
+                                <td>Technical</td>
+                                <td>03-Nov-2026</td>
+                                <td><span class="status-badge pending">PENDING</span></td>
+                            </tr>
+                            <tr>
+                                <td>Amit Sharma</td>
+                                <td>TCS</td>
+                                <td>Aptitude</td>
+                                <td>04-Nov-2026</td>
+                                <td><span class="status-badge pending">PENDING</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Open Job Aging -->
+            <div class="content-card">
+                <h2>Open Job Aging</h2>
+
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Job Code</th>
+                                <th>Company</th>
+                                <th>Job Title</th>
+                                <th>Posted Date</th>
+                                <th>Openings</th>
+                                <th>Job Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>JOB-2026-001</td>
+                                <td>Infosys</td>
+                                <td>Associate Java Developer</td>
+                                <td>01-Oct-2026</td>
+                                <td>15</td>
+                                <td><span class="status-badge active">OPEN</span></td>
+                            </tr>
+                            <tr>
+                                <td>JOB-2026-002</td>
+                                <td>TCS</td>
+                                <td>Software Trainee</td>
+                                <td>05-Oct-2026</td>
+                                <td>10</td>
+                                <td><span class="status-badge active">OPEN</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+    </main>
+</div>
+
+</body>
+</html>

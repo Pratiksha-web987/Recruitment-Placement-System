@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Candidate | RPMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <B><h2>RPMS</h2></B>
+        <p></p>
+
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="candidates.html" class="active">Candidates</a>
+            <a href="companies.html">Companies</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="applications.html">Applications</a>
+            <a href="interviews.html">Interviews</a>
+            <a href="placement-process.html">Placement Process</a>
+            <a href="reports.html">Reports</a>
+            <a href="login.html">Logout</a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <header class="topbar dashboard-welcome">
+            <h2>Candidate Management</h2>
+            <span></span>
+        </header>
+
+        <section class="page-content">
+
+            <div class="page-heading">
+                <div>
+                    <h1>Add Candidate</h1>
+                    <p>Enter candidate personal, academic and placement details.</p>
+                </div>
+                <a href="candidates.html" class="btn btn-secondary">Back to Candidates</a>
+            </div>
+
+            <form action="#" method="get">
+
+                <!-- Personal Information -->
+                <div class="form-card">
+                    <h3>Personal Information</h3>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label>Full Name *</label>
+                            <input type="text" placeholder="Enter full name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Email *</label>
+                            <input type="email" placeholder="Enter email address" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Mobile *</label>
+                            <input type="tel" placeholder="Enter 10-digit mobile number"
+                                   pattern="[0-9]{10}" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Date of Birth</label>
+                            <input type="date">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Gender</label>
+                            <select>
+                                <option value="">Select Gender</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Academic Information -->
+                <div class="form-card">
+                    <h3>Academic Information</h3>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label>Qualification *</label>
+                            <select required>
+                                <option value="">Select Qualification</option>
+                                <option>BE</option>
+                                <option>BTech</option>
+                                <option>MCA</option>
+                                <option>BSc</option>
+                                <option>MSc</option>
+                                <option>BCA</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>College *</label>
+                            <input type="text" placeholder="Enter college name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>University</label>
+                            <input type="text" placeholder="Enter university name">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Passing Year *</label>
+                            <input type="number" placeholder="e.g. 2025"
+                                   min="2000" max="2035" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Percentage / CGPA *</label>
+                            <input type="number" step="0.01"
+                                   placeholder="e.g. 68" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Backlog Count *</label>
+                            <input type="number" min="0" value="0" required>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div class="form-card">
+                    <h3>Skills</h3>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label>Primary Technology *</label>
+                            <select required>
+                                <option value="">Select Technology</option>
+                                <option>Java</option>
+                                <option>Python</option>
+                                <option>Testing</option>
+                                <option>Data Analytics</option>
+                                <option>Web Development</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Secondary Skills</label>
+                            <input type="text" placeholder="e.g. SQL, HTML, CSS">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Skill Level</label>
+                            <select>
+                                <option value="">Select Skill Level</option>
+                                <option>Basic</option>
+                                <option>Intermediate</option>
+                                <option>Advanced</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Placement Preferences -->
+                <div class="form-card">
+                    <h3>Placement Preferences</h3>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label>Current Location</label>
+                            <input type="text" placeholder="Enter current city">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Preferred Location</label>
+                            <input type="text" placeholder="Enter preferred job location">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Profile Status *</label>
+                            <select required>
+                                <option value="">Select Status</option>
+                                <option>ACTIVE</option>
+                                <option>INACTIVE</option>
+                                <option>ON_HOLD</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Form Buttons -->
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="reset" class="btn btn-secondary">Reset</button>
+                    <a href="candidates.html" class="btn btn-secondary">Cancel</a>
+                </div>
+
+            </form>
+
+        </section>
+    </main>
+</div>
+
+</body>
+</html>
