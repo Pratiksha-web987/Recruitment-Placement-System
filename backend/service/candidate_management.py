@@ -1,4 +1,5 @@
 import re
+from datetime import date, datetime
 
 from model.candidate import Candidate
 from dao.candidate_dao import CandidateDAO
@@ -9,16 +10,20 @@ from util.activity_logger import log_activity
 candidate_dao = CandidateDAO()
 
 
+# Candidate validation
 def validate_candidate(candidate):
-    if not candidate.candidate_code:
+    if not candidate.candidate_code.strip():
         print("Candidate Code is required.")
         return False
 
-    if not candidate.full_name:
-        print("Candidate Name is required.")
+    if not candidate.full_name.strip():
+        print("Candidate Name cannot be empty.")
         return False
 
-    if not re.fullmatch(r"[^@\s]+@[^@\s]+\.[^@\s]+", candidate.email):
+    if not re.fullmatch(
+        r"[^@\s]+@[^@\s]+\.[^@\s]+",
+        candidate.email
+    ):
         print("Please enter a valid email address.")
         return False
 
@@ -26,11 +31,11 @@ def validate_candidate(candidate):
         print("Mobile number must contain 10 digits and start with 6-9.")
         return False
 
-    if not candidate.qualification:
+    if not candidate.qualification.strip():
         print("Qualification is required.")
         return False
 
-    if candidate.passing_year <= 0:
+    if candidate.passing_year <= 0 or candidate.passing_year > date.today().year:
         print("Please enter a valid passing year.")
         return False
 
@@ -42,27 +47,43 @@ def validate_candidate(candidate):
         print("Backlog count cannot be negative.")
         return False
 
-    if not candidate.primary_technology:
+    if not candidate.primary_technology.strip():
         print("Primary Technology is required.")
         return False
 
     return True
 
 
+# Add candidate
 def add_candidate():
     print("\n===== ADD NEW CANDIDATE =====")
 
     try:
+        candidate_code = input("Enter Candidate Code: ").strip()
+        full_name = input("Enter Full Name: ").strip()
+
+        if not full_name:
+            print("Error: Candidate name cannot be empty.")
+            return
+
+        email = input("Enter Email: ").strip().lower()
+        mobile = input("Enter Mobile: ").strip()
+        qualification = input("Enter Qualification: ").strip()
+        passing_year = int(input("Enter Passing Year: "))
+        percentage = float(input("Enter Percentage: "))
+        backlog_count = int(input("Enter Backlog Count: "))
+        primary_technology = input("Enter Primary Technology: ").strip()
+
         candidate = Candidate(
-            candidate_code=input("Enter Candidate Code: ").strip(),
-            full_name=input("Enter Full Name: ").strip(),
-            email=input("Enter Email: ").strip().lower(),
-            mobile=input("Enter Mobile: ").strip(),
-            qualification=input("Enter Qualification: ").strip(),
-            passing_year=int(input("Enter Passing Year: ")),
-            percentage=float(input("Enter Percentage: ")),
-            backlog_count=int(input("Enter Backlog Count: ")),
-            primary_technology=input("Enter Primary Technology: ").strip()
+            candidate_code=candidate_code,
+            full_name=full_name,
+            email=email,
+            mobile=mobile,
+            qualification=qualification,
+            passing_year=passing_year,
+            percentage=percentage,
+            backlog_count=backlog_count,
+            primary_technology=primary_technology
         )
 
         if not validate_candidate(candidate):
@@ -96,6 +117,7 @@ def add_candidate():
         print("Candidate Add Failed:", error)
 
 
+# Display candidate
 def display_candidate(candidate):
     print("\n----------------------------")
     print("ID:", candidate.candidate_id)
@@ -112,6 +134,7 @@ def display_candidate(candidate):
     print("Placement Status:", candidate.placement_status)
 
 
+# View candidates
 def view_candidates():
     print("\n===== ALL CANDIDATES =====")
 
@@ -129,6 +152,7 @@ def view_candidates():
         print("Candidate View Failed:", error)
 
 
+# Search candidate
 def search_candidate():
     print("\n===== SEARCH CANDIDATE =====")
     print("1. Search by Candidate ID")
@@ -187,6 +211,7 @@ def search_candidate():
         print("Candidate Search Failed:", error)
 
 
+# Update candidate
 def update_candidate():
     print("\n===== UPDATE CANDIDATE PROFILE =====")
 
@@ -219,7 +244,6 @@ def update_candidate():
         ).strip() or None
 
         if date_of_birth:
-            from datetime import datetime
             try:
                 datetime.strptime(date_of_birth, "%Y-%m-%d")
             except ValueError:
@@ -232,7 +256,7 @@ def update_candidate():
 
         passing_year = int(input("Passing Year: "))
 
-        if passing_year <= 0 or passing_year > 9999:
+        if passing_year <= 0 or passing_year > date.today().year:
             print("Invalid passing year.")
             return
 
@@ -307,7 +331,9 @@ def update_candidate():
 
     except Exception as error:
         print("Candidate Update Failed:", error)
-        
+
+
+# Delete candidate
 def delete_candidate():
     print("\n===== DELETE CANDIDATE =====")
 
@@ -357,6 +383,8 @@ def delete_candidate():
     except Exception as error:
         print("Candidate Delete Failed:", error)
 
+
+# Candidate management menu
 def main_menu():
     while True:
         print("\n===== CANDIDATE MANAGEMENT =====")
