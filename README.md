@@ -297,3 +297,15 @@ Student Project – Python + MySQL
 
 Project Name: RPMS
 Full Name: Recruitment & Placement Management System
+
+## Candidate Input Validations
+
+The RPMS project includes the following validations in the Candidate Management module:
+
+1. Full Name Validation – Prevents candidate registration when the full name is empty.
+2. Passing Year Validation – Prevents entering a future passing year.
+3. Email Validation – Checks the email format before saving candidate details.
+4. Mobile Number Validation – Accepts only 10-digit mobile numbers starting with 6, 7, 8, or 9.
+5. Academic Details Validation – Ensures percentage is between 0 and 100 and backlog count is not negative.
+
+These validations help maintain accurate and consistent candidate records.
