@@ -102,4 +102,19 @@ TC60 | Verify skill ID ordering | Skills should be displayed in ID order | Skill
 
 ---
 
-Note: These test cases document the operations and checks performed during project development and refactoring. Tests that have not been performed are not marked as passed. Previously performed functional tests are recorded separately from post-refactoring verification.
+# RPMS – Test Cases
+
+## Candidate Management Module
+
+| Test Case ID | Test Scenario | Test Input | Expected Result |
+|---|---|---|---|
+| TC61 | Valid candidate name | Pratiksha Biradar | Candidate name accepted |
+| TC62 | Empty full name | Blank | Validation error displayed |
+| TC63 | Future passing year | 2030 | Validation error displayed |
+| TC64 | Valid email | test@gmail.com | Email accepted |
+| TC65 | Invalid email | testgmail.com | Validation error displayed |
+| TC66 | Valid mobile number | 9876543210 | Mobile number accepted |
+| TC67 | Invalid mobile number | 12345 | Validation error displayed |
+| TC68 | Valid percentage | 85 | Percentage accepted |
+| TC69 | Invalid percentage | 120 | Validation error displayed |
+| TC70 | Negative backlog count | -2 | Validation error displayed |
